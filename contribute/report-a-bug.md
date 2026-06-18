@@ -11,6 +11,11 @@ on GitLab, taking into account the following guidance.
   requested pieces of information that are relevant to the
   discovered bug.
 
+* Bugs which are suspected, or known, to have security implications
+  **must** be marked as "*confidential*" prior to submitting the
+  disclosure. Consult the [security process](../security-process)
+  for further guidance on security issue handling.
+
 * Reproduce the problem with the latest upstream QEMU release.
   Reports against older versions may not be acted upon with
   with the same priority.
@@ -36,10 +41,6 @@ on GitLab, taking into account the following guidance.
   the mailing list according to QEMU's [patch submissions
   guidelines](../submit-a-patch/). QEMU does not use a merge
   request workflow for contribution.
-
-* Do NOT report security issues (or other bugs, too) as "confidential"
-  bugs in the bug tracker.  QEMU has a [security process](../security-process)
-  for issues that should be reported in a non-public way instead.
 
 * If the problem is believed to lie in the KVM kernel module,
   following the [KVM wiki bug report](https://www.linux-kvm.org/page/Bugs)
