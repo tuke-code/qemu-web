@@ -20,6 +20,13 @@ on GitLab, taking into account the following guidance.
   to the vendor's own bug tracker instead, or reproduced with
   an upstream QEMU build prior to submission.
 
+* If any automated tools (AI/LLM based, traditional static
+  analysis, or fuzzers) were used to discover the issue, the
+  reporter is required to declare this at the start of the
+  bug report. Users of such tools are required to perform
+  triage of their output to validate all findings and reproducer
+  scenarios prior to submitting a bug report.
+
 * Reproduce the problem directly with a QEMU command-line. Avoid
   frontends and management stacks, to ensure that the bug is in
   QEMU itself and not in a frontend and make it easier for
