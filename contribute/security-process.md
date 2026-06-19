@@ -92,19 +92,28 @@ be scrubbed before disclosure.
 
  * The maintainer(s) will develop and/or review patch(es)
    for the issue privately, optionally attaching work in
-   progress fixes to the GitLab issues. All patches must
-   include the issue URL in the commit message(s). The
-   **"Workflow::In Progress"** label should be assigned when
+   progress fixes to the GitLab issues. The
+   **"Workflow::In Progress"** label can be assigned when
    a maintainer starts working on a fix.
 
  * When a CVE is allocated, it must be recorded as a comment on
    the GitLab issue, and the **"CVE::Required"** label replaced by
    the **"CVE::Assigned"** label.
 
- * The maintainer(s) will update the commit message(s) to include
-   the assigned CVE and issue URL. If multiple commits are required
-   to fix an issue the CVE must be included in the final commit in
-   the series, and may optionally be included in all prior commits.
+ * The maintainer(s) will update the commit message(s) before
+   sending a pull request to include the assigned CVE and issue
+   URL in the following format:
+
+     ```
+     Fixes: CVE-1980-12345
+     Resolves: https://gitlab.com/qemu-project/qemu/-/work_items/42
+     Reviewed-by: Not Me <notme@elsewhere.com>
+     Signed-off-by: Some One <someone@somewhere.com>
+     ```
+
+   If multiple commits are required to fix an issue the CVE & issue
+   URL must be included in the final commit in the series, and may
+   optionally be included in all prior commits.
 
  * When the maintainer(s) are satisfied that the patch(es) are
    suitable to propose for merge, they must be submitted to
