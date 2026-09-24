@@ -32,6 +32,43 @@ on GitLab, taking into account the following guidance.
   triage of their output to validate all findings and reproducer
   scenarios prior to submitting a bug report.
 
+* QEMU policy forbids the bulk filing of large numbers of
+  bug disclosures that were generated with automated tools
+  (AI/LLM, static analysis, fuzzers). Such actions are not
+  a benefit to the project, placing an unsustainable burden
+  on maintainers.
+
+  * **No more than 5 bug/security reports, discovered
+    with assistance of automated tools, are permitted
+    to be filed per week, per reporter.**
+  * **No more than 10 bug/security reports, discovered
+    with assistance of automated tools are permitted
+    to be open at any time, per reporter.**
+  * Reporters must refrain from filing any reports
+    that would cause these thresholds to be exceeded
+    without first obtaining explicit prior permission
+    from project maintainers.
+  * Reporters are **required** to respond to triage
+    comments from maintainers on bugs related to
+    automated tools on a timely basis.
+  * If at any time, the project maintainers request
+    the reporter to stop filing bug reports discovered
+    with assistance of automated tools, this must be
+    honoured.
+
+  Ignoring any of the above rules may lead to the bugs being
+  mass closed without further triage, even if valid reports.
+  In cases where the filing limits are grossly exceeded,
+  the reporter's GitLab account may be reported for abuse
+  (spam), potentially leading to termination.
+
+  If intending to file large numbers of bug disclosures
+  in aggregate, reporters are expected to invest their
+  time in writing patches, providing the patches for
+  review, and then further responding to feedback and
+  iterating on the patches until a maintainer accepts
+  them for it.
+
 * Reproduce the problem directly with a QEMU command-line. Avoid
   frontends and management stacks, to ensure that the bug is in
   QEMU itself and not in a frontend and make it easier for
